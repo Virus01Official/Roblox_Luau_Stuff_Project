@@ -4,5 +4,5 @@ If you get any code from here give me credits
 
 © by Vobibox
 
-#Contact with me
-https://twitter.com/VirusAnimates
+Contact with me
+https://twitter.com/virus_dev0
