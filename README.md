@@ -1,2 +1,5 @@
-# Roblox_Luau_Stuff_Project
-A project full of random Roblox scripts
+It's currently being worked on.
+
+If you get any code from here give me credits
+
+© by Vobibox
