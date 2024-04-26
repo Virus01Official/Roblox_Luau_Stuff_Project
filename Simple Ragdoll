@@ -1,0 +1,30 @@
+game:GetService("Players").PlayerAdded:Connect(function(player)
+    player.CharacterAdded:Connect(function(character)
+        character:WaitForChild("Humanoid").BreakJointsOnDeath = false
+        character:WaitForChild("Humanoid").Died:Connect(function()
+            for i, v in pairs(character:GetDescendants()) do
+                if v:IsA("Motor6D") then
+                    local attachment0, attachment1 = Instance.new("Attachment"), Instance.new("Attachment")
+
+                    attachment0.CFrame = v.C0
+                    attachment1.CFrame = v.C1
+
+                    attachment0.Parent = v.Part0
+                    attachment1.Parent = v.Part1
+
+                    local constraint = Instance.new("BallSocketConstraint")
+
+                    constraint.Attachment0 = attachment0
+                    constraint.Attachment1 = attachment1
+
+                    constraint.Parent = v.Part0
+
+                    v:Destroy()
+                end
+            end
+
+            character:WaitForChild("HumanoidRootPart").CanCollide = false
+
+        end)
+    end)
+end)
